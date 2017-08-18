@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SAP-i8-EZj">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="mp6-Me-qYy">
+            <objects>
+                <navigationController id="SAP-i8-EZj" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="v77-eW-ClQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ic0-qi-Lnu" kind="relationship" relationship="rootViewController" id="lDH-iH-GIM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bt9-Fr-zxa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-583" y="176"/>
+        </scene>
+        <!--Scegli l'icona-->
+        <scene sceneID="fbx-Fh-6M3">
+            <objects>
+                <viewController id="ic0-qi-Lnu" customClass="ViewController" customModule="AlternativeIcon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eWn-6O-GR5"/>
+                        <viewControllerLayoutGuide type="bottom" id="DBE-Yz-KJ6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aDz-b9-aW5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9hN-ek-fde">
+                                <rect key="frame" x="32" y="96" width="60" height="60"/>
+                                <state key="normal" image="xCodingLight"/>
+                                <connections>
+                                    <action selector="changeToLight:" destination="ic0-qi-Lnu" eventType="touchUpInside" id="s6j-Ml-Mmw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M68-vC-C0N">
+                                <rect key="frame" x="283" y="96" width="60" height="60"/>
+                                <state key="normal" image="xCodingDark"/>
+                                <connections>
+                                    <action selector="changeToDark:" destination="ic0-qi-Lnu" eventType="touchUpInside" id="kKN-bB-6fV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNO-gm-LAJ">
+                                <rect key="frame" x="102.5" y="192" width="170" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Stampa icona attuale"/>
+                                <connections>
+                                    <action selector="check:" destination="ic0-qi-Lnu" eventType="touchUpInside" id="8FM-Jx-w8n"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="M68-vC-C0N" secondAttribute="trailing" constant="32" id="6ie-Ye-5Ij"/>
+                            <constraint firstItem="M68-vC-C0N" firstAttribute="top" secondItem="eWn-6O-GR5" secondAttribute="bottom" constant="32" id="7Di-oB-EEg"/>
+                            <constraint firstItem="GNO-gm-LAJ" firstAttribute="centerX" secondItem="aDz-b9-aW5" secondAttribute="centerX" id="DDE-bv-iAa"/>
+                            <constraint firstItem="GNO-gm-LAJ" firstAttribute="top" secondItem="eWn-6O-GR5" secondAttribute="bottom" constant="128" id="Iex-Ly-Oht"/>
+                            <constraint firstItem="9hN-ek-fde" firstAttribute="top" secondItem="eWn-6O-GR5" secondAttribute="bottom" constant="32" id="Ksr-lL-1pa"/>
+                            <constraint firstItem="9hN-ek-fde" firstAttribute="leading" secondItem="aDz-b9-aW5" secondAttribute="leading" constant="32" id="g15-QU-Smm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Scegli l'icona" id="doq-6j-UWt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xbJ-EF-IEA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="306" y="176"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="xCodingDark" width="60" height="60"/>
+        <image name="xCodingLight" width="60" height="60"/>
+    </resources>
+</document>
